@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import TodoList from './components/TodeList/TodoList';
 import Header from './components/Header/Header';
 import { Invert } from './Context/InvertContext';
+import TimeWeather from './components/TimeWeather';
 
 
 
@@ -15,26 +16,29 @@ function App() {
 
 
   return (
-    <Invert.Provider value={{dark, setDark}}>
-      <div className='top_area'
-              style={{
-                backgroundImage: dark? 'url(../assets/moon2.jpg)':'',
-                border: dark? '1px solid white':'',  
-              }}>
-              
-        <Header
-          filters={filters}
-          filter={filter}
-          onFilterChange={setFilter}
-        />
-        <TodoList filter={filter} />
-      </div>
-      <div className="darkmodeBg"
+    <>
+      <TimeWeather />
+      <Invert.Provider value={{ dark, setDark }}>
+        <div className='top_area'
           style={{
-            backgroundColor: dark? 'black':'',
+            backgroundImage: dark ? 'url(../assets/moon2.jpg)' : '',
+            border: dark ? '1px solid white' : '',
+          }}>
+
+          <Header
+            filters={filters}
+            filter={filter}
+            onFilterChange={setFilter}
+          />
+          <TodoList filter={filter} />
+        </div>
+        <div className="darkmodeBg"
+          style={{
+            backgroundColor: dark ? 'black' : '',
           }}></div>
 
-    </Invert.Provider>
+      </Invert.Provider>
+    </>
   );
 }
 
