@@ -1,1 +1,7 @@
-REACT로 만든 todolist입니다.
+# 🕑TODO LIST🕣
+
+##사용기술
+- useContext
+- useEffect
+- useState
+
