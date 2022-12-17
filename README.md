@@ -25,5 +25,5 @@
 ##### all인 경우에는 모든 todolist를,  필터의 값이 all이 아닌 경우에는 todos.filter((todo)=>todo.status === filter) 
 ##### status를 이용해 필터의 값 === todolist의 status의 값 형태로 일치하는 리스트들만 노출되게끔 구현하였다.
 
-##### ❕또한 todolist의 값이 변경될때마다 useEffect를 사용해 todo의 값을 localStorage.setItem을 이용해 문자열형식으로 저장한뒤 (stringify)
-##### 다시 localStorage.getItem로 todolist의 값을 객체형태로 불러와준뒤(parse) return해주어 새로고침을 하여도 값이 유지되게끔 구현하였습니다.❕
+#### 또한 todolist의 값이 변경될때마다 useEffect를 사용해 todo의 값을 localStorage.setItem을 이용해 문자열형식으로 저장한뒤 (stringify)
+#### 다시 localStorage.getItem로 todolist의 값을 객체형태로 불러와준뒤(parse) return해주어 새로고침을 하여도 값이 유지되게끔 구현하였습니다.
